@@ -1,0 +1,12 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v1.3.12
+_src_path: gh:ThatXliner/pyt2
+add_docs: false
+author: Bryan Hu
+email: thatxliner@gmail.com
+is_app: true
+module_name: ai
+project_description: Training and inference
+project_name: AI
+pypi_name: ai
+username: ThatXliner
