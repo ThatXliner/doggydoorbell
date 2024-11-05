@@ -29,6 +29,26 @@ But we **highly recommend** you install this project using [pipx](https://pypa.g
 $ pipx install scraper
 ```
 
+## How to use
+
+For any dataset on AudioSet, you can download all of the YouTube videos being previewed on the page by this process.
+
+First, navigate to the page in your browser, and scroll all the way do load all the files. After that, run this JavaScript code in the console to get all the links.
+
+```js
+[...document.querySelectorAll("[src^='https://img.youtube.com/vi']")].map(x=>x.src)
+```
+
+Then, save the output to a file (stored somewhere; will be `~/links.json` for this example), and run the following command to download all the videos.
+
+```bash
+poetry run python -m scraper ~/links.json
+```
+Finally, you can convert all the videos to mp3 files using the following command.
+
+```bash
+for i in *; do ffmpeg -i "./$i" "./${i%.*}.mp3"; done
+```
 
 
 ## License
