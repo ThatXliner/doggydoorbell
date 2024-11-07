@@ -36,10 +36,15 @@ def split_and_label_audio(input_folder, annotations, segment_length=3000):
     #     annotations = json.load(f)
 
     output_folder = Path(input_folder) / "output"
+    already_processed = set(
+        [file.stem.split("_segment_")[0] for file in output_folder.glob("*.mp3")]
+    )
     output_folder.mkdir(exist_ok=True)
     with ThreadPoolExecutor() as executor:
         futures = []
         for file in Path(input_folder).glob("*.mp3"):
+            if file.stem in already_processed:
+                continue
             futures.append(
                 executor.submit(
                     process,
