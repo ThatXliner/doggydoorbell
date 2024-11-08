@@ -38,12 +38,6 @@ Download a strongly labelled dataset, save it to a file (will be `~/strong.txt` 
 ```bash
 poetry run python -m scraper ~/strong.txt
 ```
-Finally, you can convert all the videos to mp3 files using the following command.
-
-```bash
-for i in *; do ffmpeg -i "./$i" "./${i%.*}.mp3"; done
-```
-
 
 ## License
 
