@@ -29,6 +29,14 @@ But we **highly recommend** you install this project using [pipx](https://pypa.g
 $ pipx install ai
 ```
 
+asdfasffasf macOS
+```
+brew install ffmpg@6
+
+# 3.12.2 as an example
+cp -R /opt/homebrew/opt/ffmpeg@6/lib/*.dylib $WHEVER_PYTHON_IS/3.12.2/lib
+rm -rf .venv && poetry install
+```
 
 
 ## License

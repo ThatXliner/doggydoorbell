@@ -20,6 +20,9 @@ homepage = "https://github.com/ThatXliner/ai"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+torch = "^2.5.1"
+torchaudio = "^2.5.1"
+rich = "^13.9.4"
 
 [tool.poetry.scripts]
 ai = "ai.__main__:main"
