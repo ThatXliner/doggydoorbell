@@ -1,6 +1,6 @@
 import io
 import itertools
-from contextlib import redirect_stdout
+from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 
 import torch
@@ -31,8 +31,7 @@ class AudioDataset(Dataset):
         # XXX: Remove islice for actual training
         for file in audio_dir.glob("*.mp3"):
             try:
-                with redirect_stdout(io.StringIO()):
-                    waveform, rate = torchaudio.load(file, format="mp3")
+                waveform, rate = torchaudio.load(file, format="mp3")
                 # Downmix to mono
                 waveform = torch.mean(waveform, dim=0, keepdim=True)
 

@@ -20,10 +20,10 @@ def chunk_list[T](lst: list[T], n: int) -> list[tuple[T]]:
 # chunked = chunk_list(my_list, 3)
 # print(chunked)  # Output: [(1, 2, 3), (4, 5, 6), (7, 8, 9)]
 TAGS = {
-    "/t/dd00136",
-    "/t/dd00141",
-    "/m/01z5f",
-    "/m/0bt9lr",
+    "/t/dd00136": "Whimper (dog)",
+    "/t/dd00141": "Pant (dog)",
+    "/m/01z5f": "Canidae, wild dogs, wolves",
+    "/m/0bt9lr": "Dog",
 }
 
 
