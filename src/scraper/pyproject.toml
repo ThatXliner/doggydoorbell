@@ -20,7 +20,7 @@ homepage = "https://github.com/ThatXliner/scraper"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-yt-dlp = "^2024.11.4"
+yt-dlp = "^2026.2.21"
 rich = "^13.9.4"
 
 [tool.poetry.scripts]
